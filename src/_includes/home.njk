@@ -9,8 +9,12 @@
   <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
 </head>
 <body>
-  {% include "nav.njk" %}
-
+  <section class="hero">
+    <div class="nameplate">
+      <h1>Joel Gamble<h1>
+      <p>web developer</p>
+    </div>
+  </section>
   {{ content | safe }}
 
   <footer>
