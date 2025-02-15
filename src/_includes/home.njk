@@ -1,27 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}{% if page.url != '/' %} | {{ meta.siteName }}{% endif %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="{{ '/css/reset.css' | url }}">
   <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+
 </head>
+
 <body>
+  <!-- <div class="logo">
+    <img src="/assets/img/logo.svg">   
+  </div> -->
   <section class="hero">
-    <div class="nameplate">
-      <h1>Joel Gamble<h1>
-      <p>web developer</p>
+    <div class="inner">
+      <div class="nameplate">
+        <h1>Joel Gamble<h1>
+            <p class="lede">JavaScript Developer | UI/UX Optimizer | A/B Testing Specialist</p>
+            <p>Milwaukee, WI | joelgamble.dev@gmail.com</p>
+      </div>
     </div>
   </section>
+  <section class="cv">
+    <div class="inner">
+      <div class="intro">
+        <h2>Experience</h2>
+        <p>In my professional life, I write JavaScript Daily. I “hack” our clients websites, learn how they work and
+          build new experiences on top of the existing functionality. I like to learn new, more efficient ways to code.
+        </p>
+      </div>
+      <div class="content">
+        <div class="tech-skills">
+          <h2>Technical Skills</h2>
+          <ul>
+            <li>JavaScript, HTML, CSS, SASS</li>
+            <li>A/B Testing: Convert, Optimizely, Google Optimize <small>(R.I.P.)</small></li>
+            <li>GA4 setup, event tracking, and user funnels</li>
+            <li>Web Performance Optimization & CRO</li>
+            <li>CMS Platforms: Optimizely, SharePoint, Big Commerce, Shopify</li>
+          </ul>
+        </div>
+        <div class="jerbs">
+          <h2>Professional Experience</h2>
+          <h3>Conversion Sciences - Optimization Developer</h3>
+          <p><em>October 2022 – Present</em></p>
+          <p class="summary">Currently, I build new UI and UX experiences using JavaScript, HTML and CSS for our clients. Anything
+            from testing different text, changing button colors, or building out new menu systems, cart layouts, or full
+            on redesigns. I then use Convert or any other A/B testing tool to inject our tests into their sites and test
+            to see if these new changes result in a lift in conversions. I also setup GA4 events to measure users
+            interactions in both the testing tool and GA4.</p>
+
+          <h3>Springs Window Fashions - Senior Web Designer & Developer</h3>
+          <p><em>May 2022 – October 2022</em></p>
+          <ul>
+            <li>Along with the below duties, I Led a small team to design and develop new brand site experiences.</li>
+            <li>Served as lead front-end developer for Optimizely-based websites.</li>
+          </ul>
+
+          <h3>Web Designer & Developer</h3>
+          <p><em>January 2016 – May 2022</em></p>
+          <ul>
+            <li>Designed and developed 15+ brand websites, including baliblinds.com and graberblinds.com.</li>
+            <li>Built and optimized web platforms using Optimizely, SharePoint, and Java.</li>
+            <li>Developed a robust marketing email system in Drip.</li>
+            <li>Helped implement a company-wide Digital Asset Management System.</li>
+          </ul>
+
+          <h3>Web Contractor</h3>
+          <p><em>October 2015 – January 2016</em></p>
+          <ul>
+            <li>Managed digital assets for the web team.</li>
+            <li>Designed and updated website content to support sales teams.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="projects">
+    <div class="intro">
+      <div class="hdr">Projects</div>
+    </div>
+    <div class="inner">
+      <form class="proj">
+        <div class="hdr">Cube Catalyst</div>
+        <button id="ccTest">Pull Data</button>
+        <div class="deckdata">
+          <div class="cube-lists">
+            <div class="btns">
+              <button id="add-url">+</button>
+              <button type="submit" id="submit">Submit</button>
+            </div>
+            <div class="cube-list">
+              <label for="list-1">
+                Archidekt URL:
+                <input type="text" id="list-1">
+              </label>
+            </div>
+            {{ archidekt }}
+            </button>
+          </div>
+        </div>
+
+    </div>
+  </section>
+
   {{ content | safe }}
 
   <footer>
     <div>
-      <p>&copy; {% year %} {{ meta.siteName }}{% if meta.authorName %} • {{ meta.authorName }}{% endif %}</p>
+      <p>{% if meta.authorName %} {{ meta.authorName }}{% endif %} &copy; {% year %} <a
+          href="https://www.linkedin.com/in/joel-gamble/">LinkedIn</a>
+      </p>
+
     </div>
   </footer>
 
+  <script src="{{ '/js/cubeCatalyst.js' | url }}"></script>
 </body>
+
 </html>

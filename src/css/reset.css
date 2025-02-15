@@ -16,14 +16,6 @@ body {
   color: #222;
 }
 
-body > * {
-  --layout-spacing: max(8vh, 3rem);
-  --max-width: 70ch;
-  width: min(100%, var(--max-width));
-  margin-left: auto;
-  margin-right: auto;
-}
-
 nav ul {
   list-style: none;
   display: flex;
@@ -47,18 +39,6 @@ main > * + * {
   margin-top: var(--layout-spacing);
 }
 
-body > footer {
-  margin-top: auto;
-  padding-top: var(--layout-spacing);
-}
-
-body > footer div {
-  border-top: 1px solid #ccc;
-  padding-top: 0.5em;
-  font-size: 0.9rem;
-  color: #767676;
-}
-
 article * + * {
   margin-top: 1em;
 }
@@ -70,10 +50,6 @@ article * + * {
 
 :is(h1, h2) {
   max-width: 40ch;
-}
-
-:is(h2, h3):not(:first-child) {
-  margin-top: 2em;
 }
 
 a {

@@ -17,19 +17,26 @@ const links = [
   {
     title: 'Glide JS',
     link: 'https://clamp-generator.netlify.app/',
-    info: ``
+    info: ``,
     tags: ['js', 'library', 'slider']
   },
   {
     title: 'CSS Position Sticky Solved',
     link: 'https://dev.to/robmarshall/how-to-fix-issues-with-css-position-sticky-not-working-4a18',
-    info: ``
+    info: ``,
     tags: ['sticky', 'css']
   },{
     title: 'GTM - Load Script on First Interaction',
     link: 'https://www.marius.digital/gtm-load-scripts-on-scroll/',
-    info: `GTM guide on triggering a script to load on first user interaction.`
+    info: `GTM guide on triggering a script to load on first user interaction.`,
     tags: ['js', 'gtm']
+  },
+  {
+    title: 'JS Array Sort: multiple values',
+    link: `https://stackoverflow.com/questions/9175268/javascript-sort-function-sort-by-first-then-by-second`,
+    info: ``,
+    tags: ['js', 'sort', 'array']
+
   }
   
 ]

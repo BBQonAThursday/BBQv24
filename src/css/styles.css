@@ -1,0 +1,193 @@
+:root {
+  --light-green: #EFFFF7;
+  --purple: #4323AE;
+  --grad: linear-gradient(180deg, rgba(239,255,247,1) 0%, rgba(177,249,213,1) 100%);
+}
+
+html {
+  font-size: 16px;
+  background: var(--light-green);
+  background: var(--grad);
+}
+
+html,
+body {
+  color: var(--purple);
+}
+
+
+.ubuntu-light {
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+section {
+  width: 100%;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+
+section .inner {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 1rem;
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+
+h1 {
+  font-size: clamp(2.625rem, 3.125vw + 2rem, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.875rem, 2.679vw + 1.339rem, 2.625rem);
+}
+
+p, li {
+  margin-bottom: .75rem;
+  font-family: "Lora", serif;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  list-style-type: square;
+  margin-bottom: .5rem;
+}
+
+a {
+  text-decoration: underline;
+  color: currentColor;
+}
+
+.logo {
+  position: fixed;
+  left: 3rem;
+  top: 3rem;
+  max-width: 100px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameplate * {
+  font-family: "Ubuntu", serif;
+  text-align: center;
+}
+
+.nameplate .lede {
+  font-size: clamp(1.125rem, 1.339vw + 0.857rem, 1.5rem);
+}
+
+.nameplate p {
+  font-size: clamp(0.875rem, 0.446vw + 0.786rem, 1rem);
+}
+
+
+.cv .inner,
+footer {
+   max-width: 680px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.cv h3 {
+  margin: 2rem 0 0 0;
+}
+
+.cv .intro,
+.tech-skills {
+  margin-bottom: 4rem;
+}
+
+.projects {
+  display: none;
+}
+
+footer {
+  margin-top: 8rem;
+  padding-top: var(--layout-spacing);
+}
+
+footer div {
+  padding-top: 0.5em;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--purple);
+ 
+}
+
+footer div p {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media(max-width: 768px) {
+  .hero, .cv {
+    padding: 0;
+  }
+}
